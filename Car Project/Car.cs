@@ -1,7 +1,7 @@
 using CarComponent;
 namespace Car_Project;
 
-public class Car
+public class Car // blueprint
 {
 	public Engine engine;
 	public string myString;
@@ -11,7 +11,7 @@ public class Car
 	public Door door;
 	public Exhaust exhaust;
 	
-	public Car(Engine en, Tire tr, Wiper wp, Door door, Exhaust ex) 
+	public Car(Engine en, Tire tr, Wiper wp, Door door, Exhaust ex) // method constructor
 	{
 		engine = en;
 		tire = tr;
@@ -19,14 +19,14 @@ public class Car
 		this.door = door;
 		exhaust = ex;
 	}
-	public Car() 
+	public Car() // constructor
 	{
 		
 	}
 	
-	public void EngineRun() 
+	public void EngineRun() // method
 	{
-		engine.EngineTest();
+		engine.EngineTest(); // test engine
 	}
 	public string EngineBrandCheck() 
 	{

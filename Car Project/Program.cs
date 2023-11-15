@@ -12,9 +12,9 @@ class Program
 		Wiper wiper = new Wiper(10);
 		Exhaust exhaust = new Exhaust("brembo",8);
 
-		Car car = new Car(engine, tire, wiper, door, exhaust);
-		string result = car.EngineBrandCheck();
+		Car mycar = new Car(engine, tire, wiper, door, exhaust); // 
+		string result = mycar.EngineBrandCheck();
 		Console.WriteLine(result);
-		Console.WriteLine(car.engine.brand);
+		Console.WriteLine(mycar.engine.brand);
 	}
 }
