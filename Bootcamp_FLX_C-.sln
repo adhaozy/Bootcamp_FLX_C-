@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Generic", "A_Generic\A_Ge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_GenericConstraint", "C_GenericConstraint\C_GenericConstraint.csproj", "{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "H_MulticastDelegate", "H_MulticastDelegate\H_MulticastDelegate.csproj", "{7F06DED1-DAB0-4D59-8718-98294FC5591B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +44,9 @@ Global
 		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F06DED1-DAB0-4D59-8718-98294FC5591B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F06DED1-DAB0-4D59-8718-98294FC5591B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F06DED1-DAB0-4D59-8718-98294FC5591B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F06DED1-DAB0-4D59-8718-98294FC5591B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

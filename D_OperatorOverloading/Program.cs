@@ -7,6 +7,7 @@
         Car carc = new(4);
         Car card = new(5);
         Car result = cara + carb + carc + card;
+        Console.WriteLine(result);
     }
     class Car 
     {
