@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "B_Generic2", "B_Generic2\B_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A_Generic", "A_Generic\A_Generic.csproj", "{71974A82-89CE-42F1-B35C-74F65B5A4815}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C_GenericConstraint", "C_GenericConstraint\C_GenericConstraint.csproj", "{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{71974A82-89CE-42F1-B35C-74F65B5A4815}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71974A82-89CE-42F1-B35C-74F65B5A4815}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71974A82-89CE-42F1-B35C-74F65B5A4815}.Release|Any CPU.Build.0 = Release|Any CPU
+		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{998D9EC6-C465-4FA6-98F9-5CEAC80E2A4D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

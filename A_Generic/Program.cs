@@ -1,15 +1,18 @@
 ﻿global using Dumper;
 //Non Generic
-void Main()
+class Program
+{
+    public static void Main()
 {
 	CustomCollection custom = new CustomCollection(20);
 	custom.Add(0, "hello");
 	custom.Add(1, 3);
 	custom.Add(2, true);
 	
-	object result = custom.GetValue(1);
+	object result = custom.GetValue(0);
 	string resultfromobject = (string)result;
 	resultfromobject.Dump();
+}
 }
 class CustomCollection {
 	object[] myArray;
