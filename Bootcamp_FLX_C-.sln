@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_DelegateWithReturnValue",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_CatchDelegateWithReturn", "J_CatchDelegateWithReturn\J_CatchDelegateWithReturn.csproj", "{1294D856-6766-4D72-8EFB-57D7D8F40CAB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameController", "GameController\GameController.csproj", "{A960C383-1808-4167-BB20-5ACFB535008C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +62,9 @@ Global
 		{1294D856-6766-4D72-8EFB-57D7D8F40CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1294D856-6766-4D72-8EFB-57D7D8F40CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1294D856-6766-4D72-8EFB-57D7D8F40CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A960C383-1808-4167-BB20-5ACFB535008C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A960C383-1808-4167-BB20-5ACFB535008C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A960C383-1808-4167-BB20-5ACFB535008C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A960C383-1808-4167-BB20-5ACFB535008C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
