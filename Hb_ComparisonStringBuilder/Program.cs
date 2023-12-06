@@ -9,7 +9,7 @@ class Program {
 		StringBuilder sb = new StringBuilder();
 		Stopwatch stopwatch = new Stopwatch();
 		stopwatch.Start();
-		for (int i = 0; i < 100000; i++) {
+		for (int i = 0; i < 10000000; i++) {
 			sb.Append("a");
 			sb.Append("b");
 			sb.Replace('a', 'c');
