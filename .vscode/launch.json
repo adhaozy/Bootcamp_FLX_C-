@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/H_MulticastDelegate/bin/Debug/net7.0/H_MulticastDelegate.dll",
+            "program": "${workspaceFolder}/D_DebuggerTutorial/bin/Debug/net7.0/D_DebuggerTutorial.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/H_MulticastDelegate",
+            "cwd": "${workspaceFolder}/D_DebuggerTutorial",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
