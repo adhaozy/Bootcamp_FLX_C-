@@ -21,6 +21,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "J_CatchDelegateWithReturn",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameController", "GameController\GameController.csproj", "{A960C383-1808-4167-BB20-5ACFB535008C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadvsTaskvsAsyncAwait", "ThreadvsTaskvsAsyncAwait\ThreadvsTaskvsAsyncAwait.csproj", "{2868025D-6634-4671-B936-1599A85DA864}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsynchronousSynchronous", "AsynchronousSynchronous\AsynchronousSynchronous.csproj", "{323AFE34-AC6B-4447-9F27-B1C5ECAAE8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompareThreadSleepandAsync", "CompareThreadSleepandAsync\CompareThreadSleepandAsync.csproj", "{DFE4FE0C-3ED4-4C24-92EA-7A92B0AAC0C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "I_TaskCreation", "I_TaskCreation\I_TaskCreation.csproj", "{5568F303-AC34-4AC4-B5ED-91B218F8BD69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +74,21 @@ Global
 		{A960C383-1808-4167-BB20-5ACFB535008C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A960C383-1808-4167-BB20-5ACFB535008C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A960C383-1808-4167-BB20-5ACFB535008C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2868025D-6634-4671-B936-1599A85DA864}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2868025D-6634-4671-B936-1599A85DA864}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2868025D-6634-4671-B936-1599A85DA864}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2868025D-6634-4671-B936-1599A85DA864}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323AFE34-AC6B-4447-9F27-B1C5ECAAE8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323AFE34-AC6B-4447-9F27-B1C5ECAAE8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323AFE34-AC6B-4447-9F27-B1C5ECAAE8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323AFE34-AC6B-4447-9F27-B1C5ECAAE8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFE4FE0C-3ED4-4C24-92EA-7A92B0AAC0C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFE4FE0C-3ED4-4C24-92EA-7A92B0AAC0C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFE4FE0C-3ED4-4C24-92EA-7A92B0AAC0C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFE4FE0C-3ED4-4C24-92EA-7A92B0AAC0C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5568F303-AC34-4AC4-B5ED-91B218F8BD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5568F303-AC34-4AC4-B5ED-91B218F8BD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5568F303-AC34-4AC4-B5ED-91B218F8BD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5568F303-AC34-4AC4-B5ED-91B218F8BD69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
