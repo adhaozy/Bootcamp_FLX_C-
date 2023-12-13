@@ -75,6 +75,20 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OPT_ComparisonFilevsStream"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trial", "Trial\Trial.csproj", "{8C206A55-D926-4A37-A705-D7C263171B4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01_XMLSerialization", "01_XMLSerialization\01_XMLSerialization.csproj", "{DFF7A8E0-2513-4052-8304-E545BDAFC2A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01a_XMLSerialzation", "01a_XMLSerialzation\01a_XMLSerialzation.csproj", "{E18F8ED5-F033-4273-8FFC-7641F1977633}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02_JSONSerialization", "02_JSONSerialization\02_JSONSerialization.csproj", "{C323D04F-8482-46E1-8333-A8D58F0FD1F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02a_JSONSerialization", "02a_JSONSerialization\02a_JSONSerialization.csproj", "{E4A8F2C2-1A89-4C1F-8265-FE8C312CA59F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConstact_With_Formatter", "DataConstact_With_Formatter\DataConstact_With_Formatter.csproj", "{1BAAE904-BEE7-408F-8C21-B1249E1006F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataConstract", "DataConstract\DataConstract.csproj", "{C6B384BB-C043-4555-966C-4B99CE17DD34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DictionaryXML", "DictionaryXML\DictionaryXML.csproj", "{3430D132-767E-4FD9-BA80-688857C8AD31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -228,5 +242,33 @@ Global
 		{8C206A55-D926-4A37-A705-D7C263171B4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C206A55-D926-4A37-A705-D7C263171B4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C206A55-D926-4A37-A705-D7C263171B4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF7A8E0-2513-4052-8304-E545BDAFC2A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF7A8E0-2513-4052-8304-E545BDAFC2A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF7A8E0-2513-4052-8304-E545BDAFC2A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF7A8E0-2513-4052-8304-E545BDAFC2A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E18F8ED5-F033-4273-8FFC-7641F1977633}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18F8ED5-F033-4273-8FFC-7641F1977633}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E18F8ED5-F033-4273-8FFC-7641F1977633}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E18F8ED5-F033-4273-8FFC-7641F1977633}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C323D04F-8482-46E1-8333-A8D58F0FD1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C323D04F-8482-46E1-8333-A8D58F0FD1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C323D04F-8482-46E1-8333-A8D58F0FD1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C323D04F-8482-46E1-8333-A8D58F0FD1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4A8F2C2-1A89-4C1F-8265-FE8C312CA59F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4A8F2C2-1A89-4C1F-8265-FE8C312CA59F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4A8F2C2-1A89-4C1F-8265-FE8C312CA59F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4A8F2C2-1A89-4C1F-8265-FE8C312CA59F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BAAE904-BEE7-408F-8C21-B1249E1006F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BAAE904-BEE7-408F-8C21-B1249E1006F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BAAE904-BEE7-408F-8C21-B1249E1006F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BAAE904-BEE7-408F-8C21-B1249E1006F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6B384BB-C043-4555-966C-4B99CE17DD34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B384BB-C043-4555-966C-4B99CE17DD34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B384BB-C043-4555-966C-4B99CE17DD34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B384BB-C043-4555-966C-4B99CE17DD34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3430D132-767E-4FD9-BA80-688857C8AD31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3430D132-767E-4FD9-BA80-688857C8AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3430D132-767E-4FD9-BA80-688857C8AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3430D132-767E-4FD9-BA80-688857C8AD31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
