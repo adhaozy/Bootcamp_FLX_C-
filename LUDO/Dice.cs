@@ -1,5 +1,5 @@
 ﻿using System;
-namespace ITD.OOP1.Ludo
+namespace Iqbal
 {
     public class Dice
     {
@@ -10,18 +10,18 @@ namespace ITD.OOP1.Ludo
         // Constructor, throw dice
         public Dice()
         {
-            this.diceValue = this.rnd.Next(5, 7);
+            this.diceValue = this.rnd.Next(6, 7);
         }
 
         // method throw dice
         public int ThrowDice(){
 
-            this.diceValue = this.rnd.Next(5,7);
+            this.diceValue = this.rnd.Next(6,7);
 
 			for (int i = 3; i > 0; i--)
 			{
 				Console.Write(" . ");
-				System.Threading.Thread.Sleep(500);
+                Thread.Sleep(500);
 
 			}
 

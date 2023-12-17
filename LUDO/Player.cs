@@ -1,14 +1,14 @@
 ﻿using System;
-namespace ITD.OOP1.Ludo
+namespace Iqbal
 {
     public class Player
     {
         private readonly int playerId;
         private readonly string name;
-        private Token[] tokens;
+        private Team[] tokens;
 
         // Constructor new player
-        public Player(int id, string playerName, Token[] tokens)
+        public Player(int id, string playerName, Team[] tokens)
         {
             this.playerId = id;
             this.name = playerName;
@@ -41,18 +41,18 @@ namespace ITD.OOP1.Ludo
             return "#" + this.GetPlayerId() + " " + this.Color + " pemain: " + this.GetName;
         }
 
-        public Token[] GetTokens(){
+        public Team[] GetTokens(){
             return this.tokens;
         }
 
         public Player(int numberOfTokens)
         {
-            tokens = new Token[numberOfTokens];
+            tokens = new Team[numberOfTokens];
 
             // Initialize tokens for the player
             for (int i = 0; i < numberOfTokens; i++)
             {
-                tokens[i] = new Token();
+                tokens[i] = new Team();
             }
         }
 

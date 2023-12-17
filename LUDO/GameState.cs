@@ -6,9 +6,5 @@ using System.Threading.Tasks;
 
 namespace Iqbal
 {
-    public interface IPlay
-    {
-        void Play();
-        
-    }
+    public enum GameState { InPlay, Finished };
 }

@@ -9,17 +9,17 @@ namespace ITD.OOP1.Ludo
         {
             // Start a new Ludo Game 
             // by making an instans of game class
-            Game Ludo = new Game();
-            Ludo.StartGame();
+            GameController Ludo = new GameController();
+           
             // Initialize the array of Token objects
 
 
 
-            Token[] tokens = new Token[4];
+            Team[] tokens = new Team[4];
             // Initialize the array elements (assuming you have a constructor for Token)
             for (int i = 0; i < tokens.Length; i++)
             {
-                tokens[i] = new Token();
+                tokens[i] = new Team();
             }
 
 

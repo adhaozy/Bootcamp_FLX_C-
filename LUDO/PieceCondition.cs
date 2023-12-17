@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Iqbal
 {
-    public interface IGame
+    public enum PieceCondition
     {
-        void StartGame();
-       
+        Home,
+        Ingame,
+        Endgame,
+        Goal
     }
 }

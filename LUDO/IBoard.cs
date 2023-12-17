@@ -8,12 +8,17 @@ namespace Iqbal
 {
     public interface IBoard
     {
-    void InitializeBoard(int numberOfPlayers, int piecesPerPlayer);
-    void DisplayBoard();
-    void MovePlayerPiece(int playerNumber, int pieceNumber, int steps);
-    bool IsPlayerInSafeZone(int playerNumber, int pieceNumber, int position);
-    void EliminatePlayerPiece(int eliminatingPlayer, int eliminatedPlayer, int pieceNumber);
-    int GetPlayerPiecePosition(int playerNumber, int pieceNumber);
-    bool IsPlayerEliminated(int playerNumber);
+        int Rows { get; }
+        int Columns { get; }
+        IPiece GetPieceAtPosition(int row, int col);
+        void SetPieceAtPosition(IPiece piece, int row, int col);
+        void RemovePiece(IPiece piece);
+        void RemovePiece(IPiece piece, int row, int col);
+        List<int> GetMoveHistory(IPiece piece);
+        void MovePieceFromHome(IPiece piece);
+        void MovePieceInPlay(IPiece piece, int steps);
+
+        void MovePiece(IPiece piece, int steps);
+        void Display();
     }
 }

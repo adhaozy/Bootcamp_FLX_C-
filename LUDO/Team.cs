@@ -1,9 +1,9 @@
 ﻿using System;
-namespace ITD.OOP1.Ludo
+namespace Iqbal
 {
     public enum TokenState { Home, InPlay, Safe };
     
-    public class Token
+    public class Team
     {
         private int tokenId;
         private GameColor color;
@@ -11,7 +11,7 @@ namespace ITD.OOP1.Ludo
         internal readonly bool Value;
 
         // Constructor
-        public Token(int id, GameColor clr)
+        public Team(int id, GameColor clr)
         {
             this.tokenId = id;
             this.color = clr;
@@ -23,7 +23,7 @@ namespace ITD.OOP1.Ludo
             get { return this.state; }
             set { state = value; }
         } 
-        public Token()
+        public Team()
         {
             // Default state is Home when a player is created
             this.state = TokenState.Home;
@@ -45,29 +45,7 @@ namespace ITD.OOP1.Ludo
             return this.state;
 		}
 
-        // Method to change the player state
-        public void MoveToInPlay()
-        {
-            // Add conditions if necessary
-            
-            this.state = TokenState.InPlay;
-        }
-
-        // Method to change the player state
-        public void MoveToSafe()
-        {
-            // Add conditions if necessary
-            
-            this.state = TokenState.Safe;
-        }
-        // Method to change the TokenStatus from Home to InPlay
-        public void ChangeStatusFromHomeToInPlay()
-        {
-            if (state == TokenState.Home)
-            {
-                state = TokenState.InPlay;
-            }
-        }
+        
 
     }
 }
