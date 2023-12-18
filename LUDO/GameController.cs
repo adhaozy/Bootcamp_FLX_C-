@@ -204,7 +204,7 @@ namespace Iqbal
 		{
             //Int rounds counts how many game rounds there have been
             int rounds = 0;
-            int choice = 0;
+            
             Player myTurn = players[(playerTurn - 1)];
             int diceResult = dice.GetValue();
             
@@ -219,7 +219,7 @@ namespace Iqbal
             
 
             // No options, change turn
-            if (choice == 0)
+            if (diceResult != 6)
             {
                 while (!winner())
                 {
