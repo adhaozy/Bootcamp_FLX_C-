@@ -2150,7 +2150,7 @@ namespace Iqbal
             }
             else
             {
-                OnPlayerPos?.Invoke($"Tidak Posisi Berubah: {message}");
+                OnPlayerPos?.Invoke($"Posisi Tidak Berubah Berubah Jika Belum Ada yang Keluar dari Home: {message}");
             }
         }
 
@@ -2162,7 +2162,7 @@ namespace Iqbal
             }
             else
             {
-                OnPieceState?.Invoke($"Kondisi Piece Tetap: {message}");
+                OnPieceState?.Invoke($"Kondisi Piece Tetap Kecuali Jika Ada Yang Ada Di Luar Home: {message}");
             }
         }
 

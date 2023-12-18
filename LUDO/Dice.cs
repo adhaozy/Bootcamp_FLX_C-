@@ -10,13 +10,13 @@ namespace Iqbal
         // Constructor, throw dice
         public Dice()
         {
-            this.diceValue = this.rnd.Next(6, 7);
+            this.diceValue = this.rnd.Next(1, 7);
         }
 
         // method throw dice
         public int ThrowDice(){
 
-            this.diceValue = this.rnd.Next(6,7);
+            this.diceValue = this.rnd.Next(1,7);
 
 			for (int i = 3; i > 0; i--)
 			{
