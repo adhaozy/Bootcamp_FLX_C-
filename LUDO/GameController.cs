@@ -8,6 +8,11 @@ namespace Iqbal
 
     public class GameController 
     {
+
+        private Dice dice;
+        public Dice Dice => dice;
+        // old
+
         private IBoard board;
         private GameState state;
         private int delay = 500; // Output delay
@@ -22,7 +27,7 @@ namespace Iqbal
 
 
         Player player = new Player(numberOfTokens: 3);
-        private Dice dice = new Dice();
+        
         Team token = new Team();
         IBoard boards = new Board(15,15);
         IPiece piece = new Piece();
@@ -34,7 +39,13 @@ namespace Iqbal
 
         // Constructor method of Game class, starts a new game
 
+        public GameController(int minDiceValue, int maxDiceValue)
+        {
+            // Other initialization code
 
+            // Create an instance of Dice with custom min and max values
+            this.dice = new Dice(minDiceValue, maxDiceValue);
+        }
 
 
         public GameController()
@@ -58,116 +69,14 @@ namespace Iqbal
             pieces[14] = new Piece("Blue");
             pieces[15] = new Piece("Blue");
 
-            SetMessage("Selamat datang di Ludo", delay);
-            SetNumberOfPlayers();
-            CreatePlayers();
-            ShowPlayers();
+            
             
             this.state = GameState.InPlay;
             TakeTurns();
             
         }
 
-        private void WriteLine(string txt = "", int dl = 0)
-        {
-            Thread.Sleep(dl);
-            Console.WriteLine(txt);
-        }
-
-        private void WriteCenterLine(string txt = "", int dl = 0)
-        {
-            string textToEnter = txt;
-            Thread.Sleep(dl);
-            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (textToEnter.Length / 2)) + "}", textToEnter));
-        }
-
-        private void Write(string txt, int dl = 0)
-        {
-            Thread.Sleep(dl);
-            Console.Write(txt);
-        }
-
-        private void Clear()
-        {
-            Console.Clear();
-            WriteCenterLine("---------- Ludo ----------");
-            Console.WriteLine();
-        }
-
-        // Make MainMenu
-        private void SetMessage(string message, int dl = 0)
-        {
-            Console.Clear();
-            WriteCenterLine("---------- Ludo ----------", 0);
-            WriteCenterLine(message, dl);
-            Console.WriteLine();
-        }
-
-        private void pause(int dl){
-            Thread.Sleep(dl);
-        }
-
-        private void SetNumberOfPlayers()
-        {
-            Write("Berapa banyak pemain?: ", delay);
-
-            while (numberOfPlayers < 2 || numberOfPlayers > 4)
-            {
-                if (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out this.numberOfPlayers)){
-                    WriteLine();
-                    Write("Nilai tidak valid, pilih angka antara 2 dan 4: ", delay);
-                }
-            }
-            WriteLine("", 1000);
-        }
-
-        private void CreatePlayers(){
-            SetMessage("Masukkan nama");
-            this.players = new Player[this.numberOfPlayers];
-
-            for (int i = 0; i < this.numberOfPlayers; i++){
-                Write("Siapa nama pemainnya #" + (i+1) + ": ", delay);
-                string name = Console.ReadLine();
-
-                Team[] tkns = AssingTokens(i);
-
-                players[i] = new Player((i+1), name, tkns);
-            }
-        }
-
-        private Team[] AssingTokens(int colorIndex){
-
-            Team[] tokens = new Team[4];
-
-            for (int i = 0; i <= 3; i++)
-            {
-                switch (colorIndex)
-                {
-                    case 0:
-                        tokens[i] = new Team((i+1), GameColor.Red);
-                        break;
-                    case 1:
-                        tokens[i] = new Team((i + 1), GameColor.Blue);
-                        break;
-                    case 2:
-                        tokens[i] = new Team((i + 1), GameColor.Green);
-                        break;
-                    case 3:
-                        tokens[i] = new Team((i + 1), GameColor.Yellow);
-                        break;
-                }
-            }
-            return tokens;
-        }
-
-
-        private void ShowPlayers(){
-            SetMessage("Oke, inilah pemain Anda:", delay);
-            foreach(Player pl in this.players){
-                WriteLine(pl.GetDescription(), 1000);
-            }
-            WriteLine("", 2000);
-        }
+   
 
         
         private void TakeTurns(){

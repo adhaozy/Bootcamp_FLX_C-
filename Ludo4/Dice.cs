@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Iqbal
+namespace LudoLib
 {
     public class Dice
     {
@@ -22,7 +20,7 @@ namespace Iqbal
             this.diceValue = this.rnd.Next(this.minDiceValue, this.maxDiceValue + 1);
         }
 
-        public int ThrowDice()
+        public async Task<int> ThrowDice()
         {
             this.diceValue = this.rnd.Next(this.minDiceValue, this.maxDiceValue + 1);
             return this.diceValue;
