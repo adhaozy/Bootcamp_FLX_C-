@@ -1,7 +1,7 @@
 namespace LudoLib
 {
     // Define the Colors enum
-    public enum Colors
+    public enum GameColor
     {
         Red,
         Blue,

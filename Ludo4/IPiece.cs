@@ -2,7 +2,7 @@ namespace LudoLib
 {
     public interface IPiece
     {
-        Colors GetColor();
+        GameColor GetColor();
         StateOfPiece GetState();
         void SetState(StateOfPiece state);
         void SetPos(int pos);

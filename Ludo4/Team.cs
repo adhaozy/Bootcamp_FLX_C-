@@ -3,9 +3,33 @@ namespace LudoLib
     public class Team
     {
         private Piece[] _pieces;
-        private Colors _color;
+        private GameColor _color;
+        private List<Piece> _piecess;
 
-        public Team(Colors color)
+        public TokenState State
+        {
+            get { return this.state; }
+            set { state = value; }
+        } 
+        public Team()
+        {
+            // Default state is Home when a player is created
+            this.state = TokenState.Home;
+        }
+        public Team(int colorIndex, GameColor color)
+        {
+            _color = color;
+            _piecess = new List<Piece>();
+        }
+
+        // Existing code...
+
+        // Add a method to add a piece to the team
+        public void AddPiece(Piece piece)
+        {
+            _piecess.Add(piece);
+        }
+        public Team(GameColor color)
         {
             _color = color;
             _pieces = new Piece[4];
@@ -22,7 +46,7 @@ namespace LudoLib
             return _pieces;
         }
 
-        public Colors GetColor()
+        public GameColor GetColor()
         {
             return _color;
         }

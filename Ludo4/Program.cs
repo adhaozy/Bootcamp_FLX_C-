@@ -1,66 +1,148 @@
 ﻿using System;
+using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
 using LudoLib;
 
 class Program
-    {
+{
         static async Task Main(string[] args)
         {
-            Console.WriteLine("Welcome to Ludo!");
-
-            // Set the desired min and max values for the dice
-            int minDiceValue = 1;
-            int maxDiceValue = 6;
-
-            // Prompt the user for the number of players
-            int numberOfPlayers;
-            do
-            {
-                Console.Write("Enter the number of players (2 or 4): ");
-            } while (!int.TryParse(Console.ReadLine(), out numberOfPlayers) || (numberOfPlayers != 2 && numberOfPlayers != 4));
-
-            // Create an instance of LudoGameController with custom min and max values for the dice
-            IBoard board = new Board(boardSize: 20);
-            GameController ludoGameController = new GameController(minDiceValue, maxDiceValue, board);
-           
-
-            // Add players to the LudoGameController based on the user's choice
-            for (int i = 1; i <= numberOfPlayers; i++)
-            {
-                Console.Write($"Enter the name for Player {i}: ");
-                string playerName = Console.ReadLine();
-                Colors playerColor = (Colors)i; // Assuming the Colors enum values correspond to player numbers
-                ludoGameController.AddPlayer(i, playerName, playerColor);
-            }
-
-            // Access the Dice instance through the LudoGameController
-            Dice dice = ludoGameController.Dice;
-
-            // Access the list of players through the LudoGameController
-            List<IPlayer> players = ludoGameController.Players;
-
-            // Use the dice and players in the LudoGameController or any other part of your program
-            // Use the dice and players in the LudoGameController or any other part of your program
-            foreach (IPlayer player in ludoGameController.Players)
-            {
-                Console.WriteLine($"Player Name: {player.Name}, Color: {player.Color}");
-
-                // Access the player's pieces
-                foreach (Piece piece in player.Pieces)
-                {
-                    // Do something with each piece
-                    Console.WriteLine($"  Piece Color: {piece.GetColor()}, Piece State: {piece.GetState()}");
-                }
-            }
-
-
-         
-            // ... rest of your code
+            
+        Game game = new Game();
+       
+        // ... rest of your code
         }
-    }
+}
 
     
 
 
 
+class Game
+{
+    private GameController _gameController;
+    private int delay = 500; // Output delay
+    private int numberOfPlayers;
+    private int playerTurn = 1;
+    private Player[] players;
+    public Game()
+    {
+        SetMessageAsync("Selamat datang di Ludo", delay);
+        SetNumberOfPlayers();
+        CreatePlayers();
+        ShowPlayers();
+
+        //this.state = GameState.InPlay;
+        //TakeTurns();
+
+    }
+
+    public async Task StarGame()
+    {
+
+        
+    }
+
+    private async Task WriteLineAsync(string txt = "", int dl = 0)
+    {
+        await Task.Delay(dl);
+        Console.WriteLine(txt);
+    }
+
+    private async Task WriteCenterLineAsync(string txt = "", int dl = 0)
+    {
+        string textToEnter = txt;
+        await Task.Delay(dl);
+        Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (textToEnter.Length / 2)) + "}", textToEnter));
+    }
+
+    private async Task WriteAsync(string txt, int dl = 0)
+    {
+        await Task.Delay(dl);
+        Console.Write(txt);
+    }
+
+    private async Task SetMessageAsync(string message, int dl = 0)
+    {
+        Console.Clear();
+        await WriteCenterLineAsync("---------- Ludo ----------", 0);
+        await WriteCenterLineAsync(message, dl);
+        Console.WriteLine();
+    }
+    private async Task PauseAsync(int dl)
+    {
+        await Task.Delay(dl);
+    }
+
+    private void SetNumberOfPlayers()
+    {
+        WriteAsync("Berapa banyak pemain?: ", delay);
+
+        while (numberOfPlayers < 2 || numberOfPlayers > 4)
+        {
+            if (!int.TryParse(Console.ReadKey().KeyChar.ToString(), out this.numberOfPlayers))
+            {
+                WriteLineAsync();
+                WriteAsync("Nilai tidak valid, pilih angka antara 2 dan 4: ", delay);
+            }
+        }
+        WriteLineAsync("", 1000);
+    }
+
+    private void CreatePlayers()
+    {
+        SetMessageAsync("Masukkan nama");
+        this.players = new Player[this.numberOfPlayers];
+
+        for (int i = 0; i < this.numberOfPlayers; i++)
+        {
+            WriteAsync("Siapa nama pemainnya #" + (i + 1) + ": ", delay);
+            string name = Console.ReadLine();
+
+            Team[] tkns = AssingTokens(i);
+
+            players[i] = new Player((i + 1), name, tkns);
+        }
+    }
+
+    private Team[] AssingTokens(int colorIndex)
+    {
+
+        Team[] tokens = new Team[4];
+
+        for (int i = 0; i <= 3; i++)
+        {
+            switch (colorIndex)
+            {
+                case 0:
+                    tokens[i] = new Team((i + 1), GameColor.Red);
+                    break;
+                case 1:
+                    tokens[i] = new Team((i + 1), GameColor.Blue);
+                    break;
+                case 2:
+                    tokens[i] = new Team((i + 1), GameColor.Green);
+                    break;
+                case 3:
+                    tokens[i] = new Team((i + 1), GameColor.Yellow);
+                    break;
+            }
+        }
+        return tokens;
+    }
+
+
+    private void ShowPlayers()
+    {
+        SetMessageAsync("Oke, inilah pemain Anda:", delay);
+        foreach (Player pl in this.players)
+        {
+            WriteLineAsync(pl.GetDescription(), 1000);
+        }
+        WriteLineAsync("", 2000);
+    }
+
+    
+
+}

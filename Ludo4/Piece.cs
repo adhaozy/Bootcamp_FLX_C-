@@ -3,18 +3,18 @@ namespace LudoLib
     public class Piece : IPiece
         {
         private int _pos;
-        private Colors _color;
+        private GameColor _color;
         private StateOfPiece _state;
 
         
 
-        public Piece(Colors color)
+        public Piece(GameColor color)
         {
             _color = color;
             _state = StateOfPiece.Home;
         }
 
-        public Colors GetColor()
+        public GameColor GetColor()
         {
             return _color;
         }
