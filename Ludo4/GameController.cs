@@ -12,19 +12,22 @@ namespace LudoLib
                 private List<IPlayer> _players;
                 private int _turn;
                 private IPlayer _player;
-                private IBoard _board; // Add a private field for the board
+                //private int playerTurn = 1;
+                //private IBoard _board; // Add a private field for the board
                 public GameModes GameModes { get; private set; }
 
                 private Dictionary<IPlayer, Dictionary<Piece, StateOfPiece>> _pieceStates;
+            
+            public GameController() { }
 
-            public GameController(int minDiceValue, int maxDiceValue, IBoard board)
+            public GameController(int minDiceValue, int maxDiceValue)
             {
                 _dice = new Dice(minDiceValue, maxDiceValue);
                 _players = new List<IPlayer>();
-                _board = board;
+                //_board = board;
                 _pieceStates = new Dictionary<IPlayer, Dictionary<Piece, StateOfPiece>>();
 
-                _board.SetSafeSquares();
+                //_board.SetSafeSquares();
             }
 
         // Method to add a player to the list of players
@@ -50,45 +53,12 @@ namespace LudoLib
             public List<IPlayer> Players => _players;
 
             // Property to access the board
-            public IBoard Board => _board;
+            //public IBoard Board => _board;
 
 
-            public int NotChangeTurn(int valueTurn)
-            {
-                // Validate the specified turn value
-                if (valueTurn < 1 || valueTurn > _players.Count)
-                {
-                    // Handle invalid turn value (you may throw an exception or handle it as per your game's logic)
-                    throw new ArgumentException("Invalid turn value.");
-                }
+           
 
-                // Set the turn to the specified value
-                _turn = valueTurn;
-
-                // Call any additional logic needed for changing the turn
-                // For example, triggering events, updating game state, etc.
-
-                // Return the updated turn value
-                return _turn;
-            }
-
-            public int ChangeTurn()
-            {
-                // Increment the turn by 1
-                _turn++;
-
-                // Ensure the turn stays within the valid range (e.g., 1 to number of players)
-                if (_turn > _players.Count)
-                {
-                    _turn = 1; // Wrap around to player 1 if the turn exceeds the number of players
-                }
-
-                // Call any additional logic needed for changing the turn
-                // For example, triggering events, updating game state, etc.
-
-                // Return the updated turn value
-                return _turn;
-            }
+            
 
             public string ShowTurn()
             {
@@ -147,6 +117,35 @@ namespace LudoLib
             }
 
         // ... rest of your LudoGameController code
+
+            public int ChangeTurn(int numberOfPlayers, int currentPlayerTurn)
+            {
+                if (currentPlayerTurn == numberOfPlayers)
+                {
+                    currentPlayerTurn = 1;
+                }
+                else
+                {
+                    currentPlayerTurn++;
+                }
+
+                // Omitted Console.Write statements
+
+                return currentPlayerTurn;
+            }
+
+        // Method yang mengembalikan nilai playerTurn tanpa mengubah giliran
+            public int NotChangeTurn(int numberOfPlayers, int currentPlayerTurn)
+            {
+                if (currentPlayerTurn == numberOfPlayers)
+                {
+                    currentPlayerTurn = 1;
+                }
+                return currentPlayerTurn;
+            }
+
+
+
     }
 }
 

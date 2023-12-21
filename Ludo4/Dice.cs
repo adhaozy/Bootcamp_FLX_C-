@@ -7,6 +7,7 @@ namespace LudoLib
         private int minDiceValue;
         private int maxDiceValue;
 
+        public Dice() { }
         public Dice(int min, int max)
         {
             if (min >= max)
