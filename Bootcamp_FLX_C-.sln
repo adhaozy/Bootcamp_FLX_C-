@@ -135,6 +135,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalcualtionNUnit.Test3", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculation.TT", "Calculation.TT\Calculation.TT.csproj", "{63E82377-5D19-464A-80AD-EFEF13792B60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQL_1", "SQL_1\SQL_1.csproj", "{8F5A2D75-3B1D-4186-9FF5-12B9CA1C2C4F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -408,5 +410,9 @@ Global
 		{63E82377-5D19-464A-80AD-EFEF13792B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{63E82377-5D19-464A-80AD-EFEF13792B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{63E82377-5D19-464A-80AD-EFEF13792B60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F5A2D75-3B1D-4186-9FF5-12B9CA1C2C4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F5A2D75-3B1D-4186-9FF5-12B9CA1C2C4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F5A2D75-3B1D-4186-9FF5-12B9CA1C2C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F5A2D75-3B1D-4186-9FF5-12B9CA1C2C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
