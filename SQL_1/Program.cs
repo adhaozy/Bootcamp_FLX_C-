@@ -8,16 +8,16 @@ class Program
 	{
 		using (Northwind db = new Northwind())
 		{
-			// List<Category> categories = db.Categories.Include(c => c.Products).ToList();
-			// foreach(var c in categories) 
-			// {
-			// 	Console.WriteLine(c.CategoryName);
-			// 	Console.WriteLine(c.Products.Count);
-			// 	foreach(var p in c.Products) 
-			// 	{
-			// 		Console.WriteLine("\t" + p.ProductName);
-			// 	}
-			// }
+			List<Category> categories = db.Categories.Include(c => c.Products).ToList();
+			foreach(var c in categories) 
+			{
+				Console.WriteLine(c.CategoryName);
+				Console.WriteLine(c.Products.Count);
+				foreach(var p in c.Products) 
+				{
+					Console.WriteLine("\t" + p.ProductName);
+				}
+			}
 
 			// .Where() = Multiple
 			// .FirtsOrDefault() = Single
@@ -33,12 +33,12 @@ class Program
 			//CUD => SaveChanges
 			//Create
 			//Category
-			Category category = new Category()
-			{
-				Description = "Ini Electronic"
-			};
-			await db.Categories.AddAsync(category);
-			await db.SaveChangesAsync();
+			// Category category = new Category()
+			// {
+			// 	Description = "Ini Electronic"
+			// };
+			// await db.Categories.AddAsync(category);
+			// await db.SaveChangesAsync();
 
 			//Update
 			// Category category = await db.Categories.FindAsync(9);
