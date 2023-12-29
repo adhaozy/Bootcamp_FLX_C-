@@ -147,6 +147,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludo43.Test", "Ludo42.Test\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ludo43.Test", "Ludo43.Test\Ludo43.Test.csproj", "{B2DA29FD-549C-430C-AE62-B9843A3E4E42}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesainPattern", "DesainPattern\DesainPattern.csproj", "{B62D5436-5409-4976-B99E-799E3D404574}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoDesainPattern", "NoDesainPattern\NoDesainPattern.csproj", "{D26F8B99-F14C-4880-9772-8FB6AE856632}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -444,5 +448,13 @@ Global
 		{B2DA29FD-549C-430C-AE62-B9843A3E4E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2DA29FD-549C-430C-AE62-B9843A3E4E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2DA29FD-549C-430C-AE62-B9843A3E4E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B62D5436-5409-4976-B99E-799E3D404574}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B62D5436-5409-4976-B99E-799E3D404574}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B62D5436-5409-4976-B99E-799E3D404574}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B62D5436-5409-4976-B99E-799E3D404574}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
