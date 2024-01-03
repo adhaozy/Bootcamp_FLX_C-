@@ -151,6 +151,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesainPattern", "DesainPatt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoDesainPattern", "NoDesainPattern\NoDesainPattern.csproj", "{D26F8B99-F14C-4880-9772-8FB6AE856632}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{2622987D-2AC3-4926-8A21-AFF36D6CF980}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -456,5 +458,9 @@ Global
 		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D26F8B99-F14C-4880-9772-8FB6AE856632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2622987D-2AC3-4926-8A21-AFF36D6CF980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2622987D-2AC3-4926-8A21-AFF36D6CF980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2622987D-2AC3-4926-8A21-AFF36D6CF980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2622987D-2AC3-4926-8A21-AFF36D6CF980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
