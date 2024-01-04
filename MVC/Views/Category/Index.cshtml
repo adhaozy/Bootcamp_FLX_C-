@@ -1,0 +1,36 @@
+@model List<Category>
+<partial name="_Notification"></partial>
+<h1>Categories</h1>
+<a class="btn btn-dark" asp-controller="Category" asp-action="Create">Create Category</a>
+<table class="table table-bordered">
+    <thead>
+        <th>
+            Category Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Action
+        </th>
+    </thead>
+    <tbody>
+        @foreach (var i in Model)
+        {
+            <tr>
+                <td>
+                    @i.CategoryName
+                </td>
+                <td>
+                    @i.Description
+                </td>
+                <td>
+                    <a asp-controller="Category" asp-action="Update" asp-route-id="@i.CategoryId"
+                        class="btn btn-dark">Update</a>
+                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@i.CategoryId"
+                        class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

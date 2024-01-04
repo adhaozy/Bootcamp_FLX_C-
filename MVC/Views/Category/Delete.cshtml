@@ -1,0 +1,16 @@
+@model Category
+<h1>Delete Category</h1>
+<form method="post">
+     <input hidden asp-for="CategoryId">
+    <label>
+        Category Name
+    </label>
+    <br>
+    <input disabled asp-for="CategoryName" class="form-control"/>
+    <label>
+        Description
+    </label>
+    <br>
+    <input disabled asp-for="Description" class="form-control"/>
+    <button type="submit" class="btn btn-dark submit">Delete</button>
+</form>
