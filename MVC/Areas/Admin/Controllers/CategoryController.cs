@@ -2,20 +2,22 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebMVC.Data;
 using WebMVC.Models;
+using WebMVC.Persistence.Repository;
 
 namespace WebMVC.Controllers;
 
 public class CategoryController : Controller
 {
-	private readonly MyDatabase _db;
-	public CategoryController(MyDatabase myDatabase) 
+	
+	private readonly ICategoryRepository _category;	
+	public CategoryController(ICategoryRepository category) 
 	{
-		_db = myDatabase;
+		_category = category;
 	}
 	public async Task<IActionResult> Index() 
 	{
-		List<Category> categories = await _db.Categories.ToListAsync();
-		return View(categories);
+		IEnumerable<Category> categories = await _category.GetAll();
+		return View(categories.ToList());
 	}
 	public IActionResult Create() 
 	{
@@ -28,33 +30,33 @@ public class CategoryController : Controller
 		{
 			return View();
 		}
-		_db.Categories.Add(category);
-		await _db.SaveChangesAsync();
+		_category.Add(category);
+		await _category.SaveAsync();
 		TempData["Success"] = $"Create {category.CategoryName} is success";
 		return RedirectToAction("Index","Category");
 	}
 	public async Task<IActionResult> Update(Guid id) 
 	{
-		var category = await _db.Categories.FindAsync(id);
+		var category = await _category.Get(id);
 		return View(category);
 	}
 	[HttpPost]
 	public async Task<IActionResult> Update(Category category) 
 	{
-		_db.Categories.Update(category);
-		await _db.SaveChangesAsync();
+		_category.Update(category);
+		await _category.SaveAsync();
 		return RedirectToAction("Index","Category");
 	}
 	public async Task<IActionResult> Delete(Guid id) 
 	{
-		var category = await _db.Categories.FindAsync(id);
+		var category = await _category.Get(id);
 		return View(category);
 	}
 	[HttpPost]
 	public async Task<IActionResult> Delete(Category category) 
 	{
-		_db.Categories.Remove(category);
-		await _db.SaveChangesAsync();
+		_category.Remove(category);
+		await _category.SaveAsync();
 		return RedirectToAction("Index","Category");
 	}
 }
